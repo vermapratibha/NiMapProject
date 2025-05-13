@@ -25,7 +25,7 @@ public class CategoryController {
 	@GetMapping("/api/categories")
 	public ResponseEntity getCategory() {
 		List<Category>  list = cservice.GetCategories();
-		ResponseEntity  response= new ResponseEntity( list,HttpStatus.OK);
+		ResponseEntity<List<Category>>  response= new ResponseEntity( list,HttpStatus.OK);
 		return response;
 	}
 	
